@@ -173,12 +173,12 @@ button:hover {
 					<li class="nav-item"><a class="nav-link"
 						href="product_management.jsp"><i class="bi bi-box-seam me-2"></i>Product
 							Management</a></li>
-					<li class="nav-item"><a class="nav-link active"
+					<li class="nav-item"><a class="nav-link "
 						href="algorithm_monitoring.jsp"><i
 							class="bi bi-cpu me-2"></i>Algorithm Management</a></li>
 					<li class="nav-item"><a class="nav-link" href="FeedbackServlet"><i
 							class="bi bi-chat-dots me-2"></i>Feedback Management</a></li>
-					<li class="nav-item"><a class="nav-link"
+					<li class="nav-item"><a class="nav-link active"
 						href="Report_Generation"><i
 							class="bi bi-file-earmark-text me-2"></i>Report Management</a></li>
 				</ul>
