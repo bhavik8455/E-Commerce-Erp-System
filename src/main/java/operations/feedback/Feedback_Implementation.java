@@ -19,7 +19,7 @@ public class Feedback_Implementation implements Feedback_Interface {
 	                   "p.Name AS ProductName, p.Category AS ProductCategory, " +
 	                   "c.Name AS CustomerName, c.Email AS CustomerEmail " +
 	                   "FROM Sales s " +
-	                   "JOIN Products p ON s.ProductID = p.ProductID " +
+	                   "JOIN products p ON s.ProductID = p.ProductID " +
 	                   "JOIN Customers c ON s.CustomerID = c.CustomerID " +
 	                   "WHERE s.CustomerID = ?";
 

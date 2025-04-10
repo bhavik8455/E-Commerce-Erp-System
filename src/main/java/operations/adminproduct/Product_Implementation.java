@@ -29,7 +29,7 @@ public class Product_Implementation implements Product_Interface {
     public List<Product_Pojo> getAllProducts() {
         List<Product_Pojo> productList = new ArrayList<>();
         try {
-            ResultSet rs = db.GetConnection.getConnection().createStatement().executeQuery("Select * from products;");
+            ResultSet rs = db.GetConnection.getConnection().createStatement().executeQuery("Select * from Products;");
             while (rs.next()) {
                 Product_Pojo product = new Product_Pojo();
                 product.setId(rs.getInt("ProductID"));
@@ -56,7 +56,7 @@ public class Product_Implementation implements Product_Interface {
     public Product_Pojo getProductById(int id) {
         Product_Pojo product = null;
         try {
-            String query = "SELECT * FROM products WHERE ProductID = ?";
+            String query = "SELECT * FROM Products WHERE ProductID = ?";
             PreparedStatement ps = db.GetConnection.getConnection().prepareStatement(query);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();

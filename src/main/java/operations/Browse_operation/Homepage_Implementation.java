@@ -36,7 +36,7 @@ public class Homepage_Implementation implements Homepage_Interface {
 	@Override
 	public List<ProductPojo> getProductsByCategory(String Category) {
 		
-		 String query = "SELECT * FROM products WHERE Category = ?";
+		 String query = "SELECT * FROM Products WHERE Category = ?";
 	        List<ProductPojo> products = new ArrayList<>();
 	        
 	        try {

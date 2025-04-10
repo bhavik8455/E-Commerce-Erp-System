@@ -17,7 +17,7 @@ public class FeedbackImplementation implements FeedbackInterface {
 
         String query = "SELECT f.*, p.Name AS ProductName, p.Category AS ProductCategory, p.SellingPrice AS ProductSellingPrice " +
                        "FROM Feedback f " +
-                       "JOIN Products p ON f.ProductID = p.ProductID " +
+                       "JOIN products p ON f.ProductID = p.ProductID " +
                        "WHERE f.CustomerID = ? " +
                        "ORDER BY f.Timestamp DESC";
 

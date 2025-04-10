@@ -5,18 +5,18 @@ import java.sql.ResultSet;
 import model.ProductPojo;
 
 public class Cart_Implementation implements Cart_Interface {
-    
+
     @Override
     public ProductPojo getProductById(int productId) {
-        String query = "SELECT * FROM Products WHERE ProductID = ?";
+        String query = "SELECT * FROM products WHERE ProductID = ?";
         ProductPojo product = null;
-        
+
         try {
             PreparedStatement stmt = db.GetConnection.getConnection().prepareStatement(query);
             stmt.setInt(1, productId);
             ResultSet rs = stmt.executeQuery();
-            
-            if(rs.next()) {
+
+            if (rs.next()) {
                 product = new ProductPojo();
                 product.setId(rs.getInt("ProductID"));
                 product.setP_Name(rs.getString("Name"));
@@ -28,22 +28,22 @@ public class Cart_Implementation implements Cart_Interface {
                 product.setP_SupplierInfo(rs.getString("SupplierInfo"));
                 product.setP_ExpiryDate(rs.getDate("ExpiryDate"));
             }
-            
+
         } catch (Exception e) {
             e.printStackTrace();
         }
         return product;
     }
-    
+
     @Override
     public boolean checkStockAvailability(int productId, int requestedQuantity) {
-        String query = "SELECT Stock FROM Products WHERE ProductID = ?";
+        String query = "SELECT Stock FROM products WHERE ProductID = ?";
         try {
             PreparedStatement stmt = db.GetConnection.getConnection().prepareStatement(query);
             stmt.setInt(1, productId);
             ResultSet rs = stmt.executeQuery();
-            
-            if(rs.next()) {
+
+            if (rs.next()) {
                 int availableStock = rs.getInt("Stock");
                 return availableStock >= requestedQuantity;
             }

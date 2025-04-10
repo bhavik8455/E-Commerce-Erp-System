@@ -163,7 +163,7 @@ public class Admin_Dashboard_Operations_Implement implements Admin_Dashboard_Ope
 		int result = 0;
 
 		try {
-			PreparedStatement preparedStatement = GetConnection.getConnection().prepareStatement("SELECT COUNT(*) AS TotalProducts from Products;");
+			PreparedStatement preparedStatement = GetConnection.getConnection().prepareStatement("SELECT COUNT(*) AS TotalProducts from products;");
 
 			ResultSet rs = preparedStatement.executeQuery();
 
