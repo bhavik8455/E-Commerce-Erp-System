@@ -1,7 +1,6 @@
 # E-Commerce ERP System
 
 ![ERP System Banner](https://via.placeholder.com/1200x400?text=E-Commerce+ERP+System) 
-*(Replace with actual banner image)*
 
 ## 📌 Overview
 A comprehensive Enterprise Resource Planning system designed to streamline e-commerce operations with advanced analytics, inventory management, and automated decision-making capabilities.
